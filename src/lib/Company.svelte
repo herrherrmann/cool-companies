@@ -5,9 +5,11 @@
   export let logo
   export let url
   export let comment
+  export let tags
+  export let locations
 </script>
 
-<li>
+<li class="company">
   {#if logo}
     <img src={getImageUrl(logo, 100, 100)} alt="{name} logo" class="logo" />
   {:else}
@@ -19,22 +21,29 @@
     </a>
     <small class="comment">{comment}</small>
   </div>
+  <ul class="locations">
+    {#each locations as location}
+      <li class="location">
+        {location.name}
+      </li>
+    {/each}
+  </ul>
 </li>
 
 <style>
-  li {
+  .company {
     list-style: none;
     padding: 15px 0;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: center;
     gap: 10px;
     border-bottom: 1px solid rgba(var(--main-color-rgb), 0.1);
   }
-  li:first-of-type {
+  .company:first-of-type {
     padding-top: 0;
   }
-  li:last-of-type {
+  .company:last-of-type {
     border-bottom: none;
   }
   .logo {
@@ -45,6 +54,7 @@
     background-color: var(--bright-color);
   }
   .details {
+    flex: 1 0 auto;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -62,5 +72,22 @@
   .comment {
     color: var(--text-color);
     font-size: var(--font-size-default);
+  }
+  .locations {
+    flex: 1 0 auto;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+  }
+  .location {
+    list-style: none;
+    padding: 3px 12px;
+    columns: var(--main-color);
+    font-weight: 700;
+    background-color: var(--bright-color);
+    border-radius: 3px;
+    border: 1px solid var(--secondary-color);
   }
 </style>

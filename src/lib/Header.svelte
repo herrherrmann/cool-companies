@@ -12,7 +12,8 @@
   }
   .logo {
     background-color: var(--main-color);
-    min-width: 230px;
+    width: 230px;
+    max-width: calc(100% - 2 * 20px);
     display: inline-flex;
     justify-content: flex-start;
     align-items: center;

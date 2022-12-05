@@ -22,6 +22,8 @@
       logo={company.fields.logoSrc}
       url={company.fields.url}
       comment={company.fields.comment}
+      tags={company.fields.tags}
+      locations={company.fields.locations}
     />
   {/each}
 </ul>
