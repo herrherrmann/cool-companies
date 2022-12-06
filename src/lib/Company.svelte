@@ -25,8 +25,12 @@
     </a>
     <small class="comment">{comment}</small>
   </div>
-  <Tags tags={locationTags} />
-  <Tags tags={flatTags} />
+  <div class="tags">
+    <Tags tags={locationTags} />
+  </div>
+  <div class="tags">
+    <Tags tags={flatTags} />
+  </div>
 </li>
 
 <style>
@@ -53,9 +57,10 @@
     background-color: var(--bright-color);
   }
   .details {
-    flex: 1 0 auto;
+    flex: 1 0 30%;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 5px;
   }
   .name {
@@ -71,5 +76,8 @@
   .comment {
     color: var(--text-color);
     font-size: var(--font-size-default);
+  }
+  .tags {
+    flex: 1 0 20%;
   }
 </style>

@@ -12,18 +12,16 @@
 
 <style>
   .tags {
-    flex: 1 0 auto;
+    display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
+    gap: 2px;
     padding: 0;
-    display: flex;
-    gap: 5px;
   }
   .tag {
     list-style: none;
-    padding: 3px 12px;
+    padding: 5px 10px;
     columns: var(--main-color);
-    font-weight: 700;
     background-color: var(--bright-color);
     border-radius: 3px;
     border: 1px solid var(--secondary-color);
