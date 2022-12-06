@@ -15,7 +15,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    gap: 2px;
+    gap: 3px;
     padding: 0;
   }
   .tag {

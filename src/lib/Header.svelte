@@ -6,9 +6,8 @@
 
 <style>
   header {
-    background-color: var(--background-color);
-    border-bottom: 2px solid var(--main-color);
     padding: 20px;
+    border-bottom: 2px solid var(--main-color);
   }
   .logo {
     background-color: var(--main-color);
