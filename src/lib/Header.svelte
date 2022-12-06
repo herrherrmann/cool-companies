@@ -1,6 +1,6 @@
 <header>
   <div class="logo">
-    <h1><span class="emoji">✨</span> Cool Jobs</h1>
+    <h1><span class="emoji">✨</span> Cool Companies</h1>
   </div>
 </header>
 
@@ -12,7 +12,7 @@
   }
   .logo {
     background-color: var(--main-color);
-    width: 230px;
+    width: 300px;
     max-width: calc(100% - 2 * 20px);
     display: inline-flex;
     justify-content: flex-start;
@@ -25,14 +25,15 @@
     font-weight: 400;
     color: var(--bright-color);
     line-height: 1;
-    height: 1em;
     margin: 0;
     display: flex;
     align-items: center;
     gap: 0.25em;
-    /* text-align: center; */
   }
   .emoji {
+    display: flex;
+    align-items: center;
+    height: var(--font-size-logo);
     font-size: 1.25em;
   }
 </style>
