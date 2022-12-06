@@ -1,5 +1,6 @@
 <script lang="ts">
   import { getImageUrl } from '../services/api'
+  import Tags from './Tags.svelte'
 
   export let name
   export let logo
@@ -7,6 +8,9 @@
   export let comment
   export let tags
   export let locations
+
+  const flatTags = tags.map((tag) => tag.name)
+  const locationTags = locations.map((location) => location.name)
 </script>
 
 <li class="company">
@@ -21,13 +25,8 @@
     </a>
     <small class="comment">{comment}</small>
   </div>
-  <ul class="locations">
-    {#each locations as location}
-      <li class="location">
-        {location.name}
-      </li>
-    {/each}
-  </ul>
+  <Tags tags={locationTags} />
+  <Tags tags={flatTags} />
 </li>
 
 <style>
@@ -72,22 +71,5 @@
   .comment {
     color: var(--text-color);
     font-size: var(--font-size-default);
-  }
-  .locations {
-    flex: 1 0 auto;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    padding: 0;
-    display: flex;
-    gap: 5px;
-  }
-  .location {
-    list-style: none;
-    padding: 3px 12px;
-    columns: var(--main-color);
-    font-weight: 700;
-    background-color: var(--bright-color);
-    border-radius: 3px;
-    border: 1px solid var(--secondary-color);
   }
 </style>
