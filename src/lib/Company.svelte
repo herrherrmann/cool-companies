@@ -23,7 +23,7 @@
     <a href={url} target="_blank" rel="noreferrer" class="name">
       {name}
     </a>
-    <small class="comment">{comment}</small>
+    <small class="comment">{comment || ''}</small>
   </div>
   <div class="tags">
     <Tags tags={locationTags} />
